@@ -1,15 +1,30 @@
 import { Router } from 'express';
-import chirpsStore from './chirpstore';
+import chirpsStore from '../chirpstore';
 
+
+let chirps = [
+    {
+        user: "Chirp Johnson",
+        text: "Get the motha chhirpin chirp outta here!!!!"
+    },
+    {
+        user: "Chirp the value Johnson",
+        text: "Just some of that random chirp ipsum son!!"
+    },
+    {
+        user: "Arogd Chirpson",
+        text: "BArr is gonna need therapy after all the minds games played"
+    }
+]
 let router = Router();
 
-router.get('/:id?', (req, res) => {
-    let id = req.params.id
-    if (id) {
-        res.json(chirpsStore.GetChirp(id));
-    } else {
-        res.send(chirpsStore.GetChirps());
-    }
+router.get('/', (req, res) => {
+    res.json(chirps);
+    // let id = req.params.id
+    // if (id) {
+    //     res.json(chirpsStore.GetChirp(id));
+    // }else {
+    //     res.send(chirpsStore.GetChirps());s
 });
 
 router.post('/', (req, res) => {
