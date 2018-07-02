@@ -27,21 +27,21 @@ router.get('/', (req, res) => {
     //     res.send(chirpsStore.GetChirps());s
 });
 
-router.post('/', (req, res) => {
-    chirpsStore.CreateChirp(req.body);
-    res.sendStatus(200);
-})
+// router.post('/', (req, res) => {
+//     chirpsStore.CreateChirp(req.body);
+//     res.sendStatus(200);
+// })
 
-router.put('/:id', (req, res) => {
-    let id = req.params.id
-    chirpsStore.UpdateChirp(id, req.body);
-    res.sendStatus(200);
-})
+// router.put('/:id', (req, res) => {
+//     let id = req.params.id
+//     chirpsStore.UpdateChirp(id, req.body);
+//     res.sendStatus(200);
+// })
 
-router.delete('/:id', (res, req) => {
-    let id = req.params.id
-    res.json(chirpsStore.DeleteChirp(id, req.body));
-    res.sendStatus(200);
-})
+// router.delete('/:id', (res, req) => {
+//     let id = req.params.id
+//     res.json(chirpsStore.DeleteChirp(id, req.body));
+//     res.sendStatus(200);
+// })
 
 export default router;
