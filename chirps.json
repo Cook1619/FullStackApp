@@ -1,11 +1,15 @@
-
-[
-    {
-        "user": "Billy-bob",
-        "text": "I love to chew with one tooth"
+{
+    "0": {
+        "user": "Matt",
+        "text": "Hello world!!"
     },
-    {
-        "user":"Jim-bob Thorton",
-        "text":"I like to chew with 2 teeth"
-    }
-]
+    "1": {
+        "name": "JimBob",
+        "text": "I'm a hillbilly"
+    },
+    "2": {
+        "user": "William",
+        "text": "Bye world!!"
+    },
+    "nextid": 3
+}

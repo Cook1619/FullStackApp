@@ -9,40 +9,32 @@ class Chirps extends Component {
 
 
         this.state = {
-            posts: [
-                {
-                    text: 'This is a new chirp'
-                },
-                {
-                    text: 'I like to chirp way more than you'
-                },
-                {
-                    text: 'Im the chirpiest chirp youve ever seen'
-                }
-            ]
-
+            chirps: []
         }
     }
-    addChirp = (newPostBody) => {
-
-        this.setState({ posts: this.state.posts.concat(newPostBody) });
+    async componentDidMount() {
+        try {
+            let res = await fetch('/api/chirps', {
+                method: 'GET',
+            });
+            let data = await res.json();
+            console.log(data);
+            this.setState({
+                chirps: data
+            })
+        } catch (e) {
+            console.log(e);
+        }
     }
     render() {
-        return (
-            <div>
-                <AddChirp addChirp={this.addChirp} />
-                <div className="container">
-                    <div className="row">
-                        {
-                            this.state.posts.map((post, index) => {
-                                return (
-                                    <ChirpCard key={index} postBody={post.text} />
-                                )
-                            })}
-                    </div>
+      
+            return (
+                <div>
+                
                 </div>
-            </div>
-        )
+                  
+            )
+       
     }
 }
 
