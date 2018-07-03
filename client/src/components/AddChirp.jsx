@@ -17,7 +17,6 @@ class AddChirp extends Component {
         });
         return (
             <div>{chirps}</div>
-            
         )
     }
 }
