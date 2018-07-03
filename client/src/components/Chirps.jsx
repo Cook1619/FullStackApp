@@ -6,8 +6,7 @@ import ChirpCard from './ChirpCard';
 class Chirps extends Component {
     constructor(props) {
         super(props);
-
-
+        
         this.state = {
             chirps: []
         }
@@ -18,7 +17,6 @@ class Chirps extends Component {
                 method: 'GET',
             });
             let data = await res.json();
-            console.log(data);
             this.setState({
                 chirps: data
             })
@@ -27,7 +25,7 @@ class Chirps extends Component {
         }
     }
     render() {
-      
+        console.log(this.state.chirps)
             return (
                 <Fragment>
                     <AddChirp 

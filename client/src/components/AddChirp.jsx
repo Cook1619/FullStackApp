@@ -3,10 +3,9 @@ import React, { Component } from 'react';
 class AddChirp extends Component {
     constructor(props) {
         super(props);
-
     }
     render() {
-        let chirps = this.props.data.map((index) => {
+        let chirps = this.props.data.map((chirp,index) => {
             return (
                 <div className="card" key={index}>
                     <div className="card-body">
@@ -17,7 +16,8 @@ class AddChirp extends Component {
             )
         });
         return (
-            { chirps }
+            <div>{chirps}</div>
+            
         )
     }
 }
