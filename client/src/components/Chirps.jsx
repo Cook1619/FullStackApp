@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import AddChirp from './AddChirp';
 import ChirpCard from './ChirpCard';
 
@@ -29,9 +29,11 @@ class Chirps extends Component {
     render() {
       
             return (
-                <div>
-                
-                </div>
+                <Fragment>
+                    <AddChirp 
+                    data={this.state.chirps}
+                    />
+                </Fragment>
                   
             )
        
