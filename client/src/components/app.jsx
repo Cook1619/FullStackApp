@@ -1,18 +1,19 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import HelloWorld from './hello';
-import GoodbyeWorld from './goodbye';
+import Chirps from './Chirps';
+import EditChirp from './EditChirp';
+import ChirpCard from './ChirpCard';
 
-class Navigation extends Component {
+class App extends Component {
 
     render() {
         return (
             <Router>
                 <Fragment>
-                    <Link to="/goodbye">Goodbye</Link>
                     <Switch>
-                        <Route exact path="/" component={HelloWorld} />
-                        <Route path="/goodbye" component={GoodbyeWorld} />
+                        <Route exact path="/" component={Chirps} />
+                        <Route path="/chirp/:id/edit" component={EditChirp} />
+                        <Route path="/chirp/:id"  component={ChirpCard}/>
                     </Switch>
                 </Fragment>
             </Router>
@@ -20,4 +21,4 @@ class Navigation extends Component {
     }
 }
 
-export default Navigation;
+export default App;
