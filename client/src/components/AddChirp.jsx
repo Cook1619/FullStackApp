@@ -5,7 +5,8 @@ class AddChirp extends Component {
         super(props);
 
         this.state = {
-            chirps: []
+            user: '',
+            text: ''
         }
     }
     async componentDidMount() {
@@ -16,7 +17,9 @@ class AddChirp extends Component {
             let data = await res.json();
             console.log(data);
             this.setState({
-                chirps: data
+             user: this.state.user,
+             text: this.state.text,
+            
             })
         } catch (e) {
             console.log(e);
