@@ -17,6 +17,7 @@ class Chirps extends Component {
                 method: 'GET',
             });
             let data = await res.json();
+            console.log(data);
             this.setState({
                 chirps: data
             })
@@ -25,12 +26,11 @@ class Chirps extends Component {
         }
     }
     render() {
-        console.log(this.state.chirps)
             return (
                 <Fragment>
-                    <AddChirp 
-                    data={this.state.chirps}
-                    />
+                   <ChirpCard 
+                   text = {this.state.text}
+                   />
                 </Fragment>
                   
             )

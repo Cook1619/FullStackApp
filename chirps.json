@@ -1,15 +1,14 @@
 {
-    "0": {
+    "1":{
         "user": "Matt",
         "text": "Hello world!!"
     },
-    "1": {
+    "2":{
         "name": "JimBob",
         "text": "I'm a hillbilly"
     },
-    "2": {
+    "3":{
         "user": "William",
         "text": "Bye world!!"
-    },
-    "nextid": 3
+    }
 }

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import Chirps from './Chirps';
+import Chirps from './Chirps.jsx';
 import EditChirp from './EditChirp';
 import ChirpCard from './ChirpCard';
 

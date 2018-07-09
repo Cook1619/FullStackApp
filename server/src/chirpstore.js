@@ -6,7 +6,15 @@ if (fs.existsSync('chirps.json')) {
 }
 
 let getChirps = () => {
-    return Object.assign({}, chirps); //create a copy and return it
+    let chirpsArray = [];
+    for (let i = 0; i < chirps.nextid; i++) {
+        console.log(chirps.nextid)
+        let c = chirps[String(i)];
+        if (c) {
+            chirpsArray.push(Object.assign({}, c, { id: i }));
+        }
+    }
+    return chirpsArray;
 }
 
 let getChirp = id => {

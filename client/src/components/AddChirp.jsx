@@ -3,21 +3,34 @@ import React, { Component } from 'react';
 class AddChirp extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            chirps: []
+        }
+    }
+    async componentDidMount() {
+        try {
+            let res = await fetch('/api/chirps', {
+                method: 'POST',
+            });
+            let data = await res.json();
+            console.log(data);
+            this.setState({
+                chirps: data
+            })
+        } catch (e) {
+            console.log(e);
+        }
     }
     render() {
-        let chirps = this.props.data.map((chirp,index) => {
-            return (
-                <div className="card" key={index}>
-                    <div className="card-body">
-                        <div className="card-title">{this.props.data.name}</div>
-                        <p className="card-text">{this.props.data.text}</p>
-                    </div>
-                </div>
-            )
-        });
         return (
-            <div>{chirps}</div>
+            <Fragment>
+                <h1> hello</h1>
+            </Fragment>
+
         )
+
     }
 }
+
 export default AddChirp;

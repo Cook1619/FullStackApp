@@ -2,20 +2,6 @@ import { Router } from 'express';
 import chirpsStore from '../chirpstore';
 
 
-let chirps = [
-    {
-        user: "Chirp Johnson",
-        text: "Get the motha chhirpin chirp outta here!!!!"
-    },
-    {
-        user: "Chirp the value Johnson",
-        text: "Just some of that random chirp ipsum son!!"
-    },
-    {
-        user: "Arogd Chirpson",
-        text: "BArr is gonna need therapy after all the minds games played"
-    }
-]
 let router = Router();
 
 router.get('/', (req, res) => {
